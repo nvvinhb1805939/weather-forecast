@@ -1,0 +1,108 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.weather {
+  $primary-color: #70757a;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  width: 600px;
+
+  &__data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 16px;
+  }
+
+  &__img {
+    $size: 60px;
+    width: $size;
+    height: $size;
+
+    &--small {
+      $size: 48px;
+      width: $size;
+      height: $size;
+    }
+  }
+
+  &__temperature {
+    display: flex;
+    &-number {
+      font-size: 3rem;
+      line-height: 1;
+      font-weight: 500;
+    }
+
+    &-unit {
+      margin-left: 4px;
+      width: fit-content;
+      font-size: 1rem;
+    }
+  }
+
+  &__statistical {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: $primary-color;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__place {
+    margin-block: 0 4px;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  &__subhead {
+    color: $primary-color;
+
+    & > p {
+      margin: 0;
+      line-height: 1.6;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px;
+    text-align: center;
+
+    border-radius: 8px;
+    cursor: pointer;
+
+    &.active {
+      background-color: #f8f9fa;
+    }
+
+    & > p {
+      margin: 0;
+
+      & > span:last-child {
+        margin-left: 8px;
+        color: $primary-color;
+      }
+    }
+  }
+}
